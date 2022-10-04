@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "c73378ae-10ce-43bd-bcef-a8221162a9c6",
+		"name": "HTTPBin - getting user id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Getting user id",
+			"_postman_id": "d49b70fe-7b1b-4810-8702-8acaa7b9c09d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://httpbin.org/uuid"
+			},
+			"response": []
+		}
+	]
+}
