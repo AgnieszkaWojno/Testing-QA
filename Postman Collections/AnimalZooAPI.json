@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "277eb65d-6c01-4f4c-b4ae-8dee5225e15a",
+		"name": "AnimalZoo - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get random animal",
+			"_postman_id": "8c471620-a79b-482f-821b-4a9b4835352a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://zoo-animal-api.herokuapp.com/animals/rand/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get animal id - auto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e9b2fe76-2290-4038-8c4f-24a23405f1db",
+						"exec": [
+							"pm.test(\"id should be grater than 0\",()=>{\r",
+							"    const dataResp = pm.response.json();\r",
+							"    console.log(dataResp.id);\r",
+							"    pm.expect(dataResp.id).to.be.greaterThan(0);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "dc126d3a-6241-44b8-a9ef-e41108746e1a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://zoo-animal-api.herokuapp.com/animals/rand/"
+			},
+			"response": []
+		},
+		{
+			"name": "Getting number of animals",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "01e90e61-3e3e-4721-a252-91cb091b6109",
+						"exec": [
+							"\r",
+							"console.log(pm.collectionVariables.id)\r",
+							"\r",
+							"\r",
+							"pm.test(\"Should be 5 animals\", ()=>{\r",
+							"    const respData = pm.response.json();\r",
+							"    const numberOfAnimals = Object.keys(respData).length\r",
+							"    console.log(numberOfAnimals)\r",
+							"    pm.expect(numberOfAnimals).to.be.equal(5)\r",
+							"    console.log(respData);\r",
+							"    console.log(typeof(respData));  \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "5c74da83-4094-446b-8c64-933026c153e9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://zoo-animal-api.herokuapp.com/animals/rand/5"
+			},
+			"response": []
+		}
+	]
+}
