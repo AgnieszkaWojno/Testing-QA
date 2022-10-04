@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "b5b3a79c-bf5d-4c13-b081-5abcc6c71d60",
+		"name": "HTTPBin - automatization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get user id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7612cbe0-11fa-40c8-8aea-5853af931341",
+						"exec": [
+							"pm.test(\"Status code is 200\",()=>{\r",
+							"    pm.response.to.have.status(200)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verification of user id\",()=>{\r",
+							"    const getData = pm.response.json()  //pm.response.uuid;\r",
+							"    console.log(getData.uuid)  //console.log(getData);\r",
+							"   // pm.expect(getData.uuid).to.be.lengthOf.greaterThan(0);\r",
+							"    pm.expect(getData.uuid.length).to.be.greaterThan(0);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "ad1a47d7-cfa0-480f-9e0a-dbf3228af4c8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://httpbin.org/uuid"
+			},
+			"response": []
+		}
+	]
+}
