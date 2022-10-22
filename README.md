@@ -9,17 +9,29 @@ Languages: english - B2, polish - native
 # Tech skills
 
 •	SQL
+
 •	JIRA
+
 •	REPLIT
+
 •	POSTMAN
+
 •	Selenium IDE
+
 •	Git
+
 •	Python
+
 •	Pandas
+
 •	C++
+
 •	HTML, CSS, JavaScript
+
 •	Oracle VM Virtual Box
+
 •	Java
+
 •	Linux - to refresh
 
 
