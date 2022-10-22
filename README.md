@@ -36,5 +36,7 @@ Languages: english - B2, polish - native
 
 
 My tests cases using Python and Selenium
+
 My tests cases using Postman Rest Api testing
+
 My Exploratory tests
